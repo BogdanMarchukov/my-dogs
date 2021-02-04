@@ -1,0 +1,10 @@
+.Banner {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 850px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 10px #030632;
+}
