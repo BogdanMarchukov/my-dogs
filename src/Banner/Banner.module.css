@@ -8,3 +8,42 @@
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 10px #030632;
 }
+
+.sliderShow {
+    animation: slider 3s alternate-reverse;
+}
+
+.sliderHide {
+    animation: slider 3s forwards;
+}
+
+.displayNone {
+    display: none;
+}
+
+@keyframes slider {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 576px){
+    .Banner {
+        background-image: none !important;
+        display: flex;
+        box-shadow: none;
+
+    }
+    .Banner img {
+        display: block;
+        width: 330px;
+        height: 330px;
+        margin: 100px auto;
+        border: solid #ffd700 5px;
+        border-radius: 50%;
+    }
+}
