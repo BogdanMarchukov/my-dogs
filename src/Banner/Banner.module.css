@@ -1,27 +1,67 @@
-.Banner {
+
+.wrapper {
+    width: 100%;
+    height: 850px;
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    margin: 0 auto;
-    height: 850px;
+    overflow: hidden;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 10px #030632;
 }
 
+
+
+.imageSlade_1 {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+
+}
+
+.imageSlade_2 {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.imageSlade_3 {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.sliderBlock {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
 .sliderShow {
-    animation: slider 3s alternate-reverse;
+    animation: sliderShow 3s forwards;
 }
 
 .sliderHide {
-    animation: slider 3s forwards;
+    animation: sliderHide 3s forwards;
 }
 
-.displayNone {
+.displayNone{
     display: none;
 }
 
-@keyframes slider {
+.displayNone_mobile {
+    display: none;
+}
+
+.contentBlock {
+    border: red solid 1px;
+    height: 400px;
+    position: absolute;
+    z-index: 5;
+    left: 20%;
+}
+
+@keyframes sliderHide {
     0% {
         opacity: 1;
     }
@@ -30,15 +70,32 @@
     }
 }
 
+@keyframes sliderShow {
+    0% {
+        opacity: .1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 @media (max-width: 576px){
-    .Banner {
-        background-image: none !important;
+    .sliderBlock {
+        display: none;
+    }
+    .wrapper {
         display: flex;
         box-shadow: none;
 
     }
-    .Banner img {
+    .imageSlade_1 {
+        position: absolute;
+        display: none;
+
+    }
+
+    .displayNone_mobile {
         display: block;
         width: 330px;
         height: 330px;
