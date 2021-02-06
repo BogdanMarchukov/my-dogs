@@ -54,11 +54,11 @@
 }
 
 .contentBlock {
+    width: 100%;
     border: red solid 1px;
-    height: 400px;
     position: absolute;
     z-index: 5;
-    left: 20%;
+
 }
 
 @keyframes sliderHide {
