@@ -1,17 +1,14 @@
 import React from 'react';
+import classes from "./BannerContent.module.css"
+
 
 const BannerContent = () => {
 
 
     return (
-        <>
-            <h1>Вязка Чихуа-Хуа</h1>
-            <h2>Абинск</h2>
-            <p>
-                Жду с нетерпением тебя моя принцесса<br/>
-                <span>Элвис</span>
-            </p>
-        </>
+        <div className={classes.BannerContent}>
+            <h1>Вязка <span>"Чихуа-Хуа"</span> В Абинске</h1>
+        </div>
     );
 
 };

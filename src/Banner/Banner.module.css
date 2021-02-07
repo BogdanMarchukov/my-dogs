@@ -55,11 +55,12 @@
 
 .contentBlock {
     width: 100%;
-    border: red solid 1px;
+    height: 100%;
     position: absolute;
     z-index: 5;
 
 }
+
 
 @keyframes sliderHide {
     0% {
