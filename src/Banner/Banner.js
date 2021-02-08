@@ -14,7 +14,7 @@ const Banner = () => {
             <div className={classes.wrapper}>
                 {/*контент Desktop*/}
                 <div className={classes.contentBlock}>
-                    <Container>
+                    <Container className={classes.containerContentMobile}>
                         <BannerContent/>
                     </Container>
                 </div>

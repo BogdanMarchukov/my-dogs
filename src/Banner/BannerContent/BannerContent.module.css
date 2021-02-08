@@ -1,3 +1,10 @@
+/*Контент*/
+.wrapper {
+    width: 100%;
+    height: 120px;
+}
+
+
 .BannerContent {
     background-color: black;
     border-radius: 0 0 30px 30px;
@@ -26,6 +33,217 @@
     left: 37%;
 }
 
+/*Контент*/
+
+/*Меню Toggle*/
+.WrapListToggle {
+    width: 100%;
+    height: 500px;
+
+}
+
+.listToggle {
+    overflow: hidden;
+    border: solid #ffd700 3px;
+    border-top: white solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 10px;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+
+.listToggle ul li {
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    transform: translateX(450px);
+}
+
+.listToggle.entering {
+    animation: animationList .5s forwards;
+}
+
+
+.listToggle.entered {
+    height: 400px;
+}
+.listToggle.exiting {
+    animation: animationList .5s alternate-reverse;
+}
+
+.listToggle.entering ul li:nth-child(1) {
+    animation: animationItem_1 4s forwards;
+}
+.listToggle.entering ul li:nth-child(2) {
+    animation: animationItem_2 4s forwards;
+}
+.listToggle.entering ul li:nth-child(3) {
+    animation: animationItem_3 4s forwards;
+}
+.listToggle.entering ul li:nth-child(4) {
+    animation: animationItem_4 4s forwards;
+}
+.listToggle.entering ul li:nth-child(5) {
+    animation: animationItem_5 4s forwards;
+}
+.listToggle.entering ul li:nth-child(6) {
+    animation: animationItem_6 4s forwards;
+}
+
+.listToggle.entered ul li {
+    transform: translateX(0px);
+}
+
+
+
+
+
+.listToggle p {
+    font-family: 'Roboto', sans-serif;
+    color: #ffd700;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+@keyframes animationList {
+    0% {
+        height: 10px;
+        font-size: 1px;
+    }
+    100% {
+        height: 400px;
+        font-size: 20px;
+    }
+}
+
+@keyframes animationItem_1 {
+    0% {
+        transform: translateX(450px);
+
+    }
+    17% {
+        transform: translateX(0px);
+    }
+    34% {
+
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationItem_2 {
+    0% {
+        transform: translateX(450px);
+    }
+    17% {
+        transform: translateX(450px);
+    }
+    34% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationItem_3 {
+    0% {
+        transform: translateX(450px);
+    }
+    34% {
+        transform: translateX(450px);
+    }
+    51% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationItem_4 {
+    0% {
+        transform: translateX(450px);
+    }
+    34% {
+        transform: translateX(450px);
+    }
+    51% {
+        transform: translateX(450px);
+    }
+    68% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationItem_5 {
+    0% {
+        transform: translateX(450px);
+    }
+    68% {
+        transform: translateX(450px);
+    }
+    85% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationItem_6 {
+    0% {
+        transform: translateX(450px);
+    }
+    68% {
+        transform: translateX(450px);
+    }
+    85% {
+        transform: translateX(450px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .BannerContent {
+        margin: 0;
+        border-radius: 0 0 7px 7px;
+        height: 70px;
+    }
+
+    .BannerContent h1 {
+        font-size: 45px;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .BannerContent {
+        border-radius: 0 0 7px 7px;
+        height: 100px;
+    }
+
+    .BannerContent h1 {
+        font-size: 35px;
+    }
+}
 
 
 

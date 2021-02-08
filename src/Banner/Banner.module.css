@@ -16,6 +16,7 @@
     z-index: 1;
     position: absolute;
     width: 100%;
+    height: auto;
 
 }
 
@@ -23,12 +24,14 @@
     z-index: 1;
     position: absolute;
     width: 100%;
+    height: auto;
 }
 
 .imageSlade_3 {
     z-index: 1;
     position: absolute;
     width: 100%;
+    height: auto;
 }
 
 .sliderBlock {
@@ -81,6 +84,20 @@
 }
 
 
+@media (max-width: 768px) {
+    .containerContentMobile {
+        padding: 0;
+    }
+
+
+    .wrapper {
+        height: 500px;
+    }
+
+
+}
+
+
 @media (max-width: 576px){
     .sliderBlock {
         display: none;
@@ -100,8 +117,12 @@
         display: block;
         width: 330px;
         height: 330px;
-        margin: 100px auto;
-        border: solid #ffd700 5px;
+        margin: 150px auto;
         border-radius: 50%;
+        box-shadow: 0 0 50px black;
+    }
+
+    .containerContentMobile {
+        padding: 0;
     }
 }
