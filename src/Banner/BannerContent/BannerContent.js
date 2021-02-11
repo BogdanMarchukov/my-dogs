@@ -24,25 +24,48 @@ const BannerContent = () => {
             <div className={classes.WrapListToggle}>
                 <Transition
                     in={openList}
-                    timeout={4000}
+                    timeout={{
+                        enter: 4000,
+                        exit:500
+                    }}
 
                 >
                     {state => {
-                        return (
-                            <div className={`${classes.listToggle} ${classes[state]}`}>
-                                <ul>
-                                    <li key={1}>Пол: Мальчик</li>
-                                    <li key={2}>Расцветка: Шоколад</li>
-                                    <li key={3}>Зазмер: Стандарт</li>
-                                    <li key={4}>Вес: 2.7 кг</li>
-                                    <li key={5}>Возраст 2.5 года</li>
-                                    <li key={6}>Документы: Родословная</li>
-                                </ul>
-                                <p>
-                                    Бесплатно, на нашей территории. Поможем с продажей щенков.
-                                </p>
-                            </div>
-                        )
+                        if (state === 'exited') {
+                            return (
+                                <div className={`${classes.listToggle}`}>
+                                    <ul>
+                                        <li key={1}>Пол: Мальчик</li>
+                                        <li key={2}>Расцветка: Шоколад</li>
+                                        <li key={3}>Размер: Стандарт</li>
+                                        <li key={4}>Вес: 2.7 кг</li>
+                                        <li key={5}>Возраст 2.5 года</li>
+                                        <li key={6}>Документы: Родословная</li>
+                                    </ul>
+                                    <p>
+                                        Бесплатно, на нашей территории. Поможем с продажей щенков.
+                                    </p>
+                                </div>
+                            )
+                        }
+                        else {
+                            return (
+                                <div className={`${classes.listToggle} ${classes[state]}`}>
+                                    <ul>
+                                        <li key={1}>Пол: Мальчик</li>
+                                        <li key={2}>Расцветка: Шоколад</li>
+                                        <li key={3}>Размер: Стандарт</li>
+                                        <li key={4}>Вес: 2.7 кг</li>
+                                        <li key={5}>Возраст 2.5 года</li>
+                                        <li key={6}>Документы: Родословная</li>
+                                    </ul>
+                                    <p>
+                                        Бесплатно, на нашей территории. Поможем с продажей щенков.
+                                    </p>
+                                </div>
+                            )
+                        }
+
                     }}
 
                 </Transition>

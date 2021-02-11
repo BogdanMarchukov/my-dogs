@@ -4,6 +4,7 @@ import elvis_mobile from "./images/elvis_mini.png"
 import {Container} from "react-bootstrap";
 import BannerContent from "./BannerContent/BannerContent";
 import Slider from "./Slider/Slider";
+import MobileBannerContent from "./MobileBannerContent/MobileBannerContent";
 
 
 const Banner = () => {
@@ -23,6 +24,7 @@ const Banner = () => {
                 <Slider/>
 
                 {/*Мобильный контент*/}
+                <MobileBannerContent/>
                 <img className={classes.displayNone_mobile} src={elvis_mobile} alt={''}/>
 
             </div>

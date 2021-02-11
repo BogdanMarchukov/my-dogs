@@ -104,7 +104,9 @@
     }
     .wrapper {
         display: flex;
+        flex-direction: column;
         box-shadow: none;
+        height: 1150px;
 
     }
     .imageSlade_1 {
@@ -113,11 +115,12 @@
 
     }
 
+
     .displayNone_mobile {
         display: block;
         width: 330px;
         height: 330px;
-        margin: 150px auto;
+        margin: 0 auto;
         border-radius: 50%;
         box-shadow: 0 0 50px black;
     }

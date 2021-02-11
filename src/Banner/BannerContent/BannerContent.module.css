@@ -70,6 +70,10 @@
     animation: animationList .5s forwards;
 }
 
+.listToggle.exited {
+    animation: animationList .5s forwards;
+}
+
 
 .listToggle.entered {
     height: 400px;
@@ -243,6 +247,14 @@
     .BannerContent h1 {
         font-size: 35px;
     }
+    .listToggle {
+        display: none;
+    }
+
+    .WrapListToggle {
+        display: none;
+    }
+
 }
 
 
