@@ -120,7 +120,7 @@
         display: block;
         width: 330px;
         height: 330px;
-        margin: 135px auto;
+        margin: 100px auto;
         border-radius: 50%;
         box-shadow: 0 0 50px black;
     }
@@ -130,6 +130,7 @@
     }
 
     .contentBlock {
+        height: 0;
         z-index: 0;
     }
 }

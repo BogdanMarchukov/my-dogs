@@ -5,9 +5,9 @@
 }
 
 .wrapper {
-    transform: translateY(-300px);
+    transform: translateY(-400px);
     overflow: hidden;
-    margin: 140px auto;
+    margin: 0 auto;
     background-color: black;
     border-radius: 50%;
     width: 100px;
@@ -95,7 +95,7 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        transform: translateY(-300px);
+        transform: translateY(-400px);
     }
 
 }

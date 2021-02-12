@@ -3,14 +3,19 @@ import { Container} from "react-bootstrap";
 import classes from "./MobileBannerContent.module.css"
 import {Transition} from "react-transition-group";
 import CloseToggle from "./CloseToggle/CloseToggle";
+import OpenToggle from "./OpenToggle/OpenToggle";
 
 const MobileBannerContent = () => {
 
     const [startAnimate, setStartAnimate] = useState(false)
+    const [firstRender, setFirstRender] = useState(false)
     const [activeClass, setActiveClass] = useState(classes.wrapper)
 
     useEffect(() => {
-        setTimeout(()=>setStartAnimate(prevState => !prevState),500)
+        setTimeout(()=> {
+            setFirstRender(true)
+            setStartAnimate(prevState => !prevState)
+        },500)
 
     }, [])
 
@@ -18,10 +23,26 @@ const MobileBannerContent = () => {
         setStartAnimate(prevState => !prevState)
     }
 
+    const openList = () => {
+        setStartAnimate(prevState => !prevState)
+    }
+
+    const showToggleOpen = () => {
+        if (activeClass === classes.wrapper) {
+            return false
+        }
+        else return true
+    }
+
 
 
     return (
         <Container>
+            <OpenToggle
+                open = {showToggleOpen()}
+                openList = {openList}
+                firstRender = {firstRender}
+            />
             <Transition
                 in={startAnimate}
                 timeout={1000}
@@ -48,6 +69,7 @@ const MobileBannerContent = () => {
                 }}
             >{state => {
                 return (
+
                     <div className={activeClass}>
                         <CloseToggle
                             hideContent ={hideContent}
@@ -68,9 +90,6 @@ const MobileBannerContent = () => {
                 )
             }}
             </Transition>
-            <div style={{width: '20px', height: '20px'}}>
-
-            </div>
         </Container>
     );
 

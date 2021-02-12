@@ -1,0 +1,17 @@
+.hideToggle {
+    opacity: 0;
+    width: 55px;
+    height: 60px;
+    margin: 40px auto;
+
+}
+
+.hideToggle.openToggleShow {
+    z-index: 10;
+    opacity: 1;
+    width: 55px;
+    height: 60px;
+    margin: 90px auto;
+    transition: opacity .5s;
+}
+
