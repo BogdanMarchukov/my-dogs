@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./CloseToggle.module.css"
 
-const CloseToggle = () => {
+const CloseToggle = ({hideContent, visible}) => {
+
     return (
-        <div className={classes.closeToggle}>
+        <div
+            className={classes[visible]}
+            onClick={hideContent}
+        >
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
                  className="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 352 512">

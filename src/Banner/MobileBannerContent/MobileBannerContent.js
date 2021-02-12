@@ -7,6 +7,7 @@ import CloseToggle from "./CloseToggle/CloseToggle";
 const MobileBannerContent = () => {
 
     const [startAnimate, setStartAnimate] = useState(false)
+    const [activeClass, setActiveClass] = useState(classes.wrapper)
 
     useEffect(() => {
         setTimeout(()=>setStartAnimate(prevState => !prevState),500)
@@ -18,15 +19,40 @@ const MobileBannerContent = () => {
     }
 
 
+
     return (
         <Container>
             <Transition
                 in={startAnimate}
                 timeout={1000}
+                unmountOnExit={true}
+                onEntering={() => {
+                    if (activeClass === classes.wrapper) {
+                        setActiveClass(`${classes.wrapper} ${classes.showList}`)
+                    }
+                }}
+                onExit={()=> {
+                    if(activeClass === `${classes.wrapper} ${classes.showList}`) {
+                        setActiveClass(classes.wrapperOpen)
+                    }
+                }}
+                onExiting={() => {
+                    if(activeClass === classes.wrapperOpen) {
+                        setActiveClass(`${classes.wrapperOpen} ${classes.hideList}`)
+                    }
+                }}
+                onExited={()=> {
+                    if(activeClass === `${classes.wrapperOpen} ${classes.hideList}`) {
+                        setActiveClass(classes.wrapper)
+                    }
+                }}
             >{state => {
                 return (
-                    <div className={`${classes.wrapper} ${classes[state]}`}>
-                        <CloseToggle hideContent ={hideContent} />
+                    <div className={activeClass}>
+                        <CloseToggle
+                            hideContent ={hideContent}
+                            visible = {state}
+                        />
                         <ul>
                             <li key={1}>Пол: Мальчик</li>
                             <li key={2}>Расцветка: Шоколад</li>
@@ -42,6 +68,9 @@ const MobileBannerContent = () => {
                 )
             }}
             </Transition>
+            <div style={{width: '20px', height: '20px'}}>
+
+            </div>
         </Container>
     );
 

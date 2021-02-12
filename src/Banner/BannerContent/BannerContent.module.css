@@ -7,8 +7,8 @@
 
 .BannerContent {
     background-color: black;
+    display: block;
     border-radius: 0 0 30px 30px;
-
     z-index: 10;
     width: 100%;
     height: 80px;
@@ -240,6 +240,7 @@
 
 @media (max-width: 576px) {
     .BannerContent {
+        display: block;
         border-radius: 0 0 7px 7px;
         height: 100px;
     }
@@ -250,6 +251,7 @@
     .listToggle {
         display: none;
     }
+
 
     .WrapListToggle {
         display: none;

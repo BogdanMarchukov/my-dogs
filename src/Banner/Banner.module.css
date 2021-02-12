@@ -11,7 +11,6 @@
 }
 
 
-
 .imageSlade_1 {
     z-index: 1;
     position: absolute;
@@ -48,7 +47,7 @@
     animation: sliderHide 3s forwards;
 }
 
-.displayNone{
+.displayNone {
     display: none;
 }
 
@@ -98,19 +97,20 @@
 }
 
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
     .sliderBlock {
         display: none;
     }
+
     .wrapper {
-        display: flex;
+        display: block;
         flex-direction: column;
         box-shadow: none;
-        height: 1150px;
+        height: 100%;
 
     }
+
     .imageSlade_1 {
-        position: absolute;
         display: none;
 
     }
@@ -120,12 +120,16 @@
         display: block;
         width: 330px;
         height: 330px;
-        margin: 0 auto;
+        margin: 135px auto;
         border-radius: 50%;
         box-shadow: 0 0 50px black;
     }
 
     .containerContentMobile {
         padding: 0;
+    }
+
+    .contentBlock {
+        z-index: 0;
     }
 }
